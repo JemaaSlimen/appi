@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MUPDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd"
+  xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd">
+  <packageinformation>
+    <name>Synaptics, Inc</name>
+
+<version>19.2.17.70</version>
+    <installertype>custom</installertype>
+    <packagegrouping>pair_driver_and_application</packagegrouping>
+    <packagingtype>executable</packagingtype>
+    <releasetype>DRVR</releasetype>
+    <mupspecificationversion>2.4.3</mupspecificationversion>
+    <supportedoperatingsystems>
+      <osidentifier name="Windows10" architecture="x64"></osidentifier>
+      <osidentifier name="Windows9" architecture="x64"></osidentifier>
+      <osidentifier name="Windows8" architecture="x64"></osidentifier>
+      <osidentifier name="Windows7" architecture="x64"></osidentifier>
+    </supportedoperatingsystems>
+    <content>
+      <Device componentID="103838">
+        <Image version="19.2.17.70" type="DRVR">
+          <file>SynPD.inf</file>
+          <file>SynTP.sys</file>
+          <file>SynTP.cat</file>
+        </Image>
+      </Device>
+      <Device componentID="103838">
+        <Image version="19.2.17.70" type="DRVR">
+          <file>SynSmbDrv.ini</file>
+          <file>Smb_driver_AMDASF.sys</file>
+          <file>Smb_driver_Intel.sys</file>
+          <file>SynTP.cat</file>
+        </Image>
+      </Device>
+      <Device componentID="103838">
+        <Image version="19.2.17.70" type="DRVR">
+          <file>SynRMIHID.ini</file>
+          <file>SynRMIHID.sys</file>
+          <file>SynTP.cat</file>
+        </Image>
+      </Device>
+      <Device componentID="103838">
+        <Image version="19.2.17.70" type="DRVR">
+          <file>SynPTPHID.ini</file>
+          <file>SynPTPHID.sys</file>
+          <file>SynTP.cat</file>
+        </Image>
+      </Device>
+      <Device componentID="103838">
+        <Image version="19.2.17.70" type="DRVR">
+          <file>SynHIDMini.ini</file>
+          <file>SynTP.sys</file>
+          <file>SynTP.cat</file>
+        </Image>
+      </Device>
+    </content>
+  </packageinformation>
+  <executable>
+
+    <executablename>Synaptics_v19_2_17_70__C__x86-x64__Win7_Win8_Win81_Win10__Signed__MUP__DellWPF.exe</executablename>
+  </executable>
+  <behaviors>
+    <behavior name="attended">
+      <vendoroption>
+        <optionvalue requiresvalue="false" switch="/">E</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="unattended">
+      <vendoroption>
+        <optionvalue requiresvalue="false" switch="/">s</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="freshinstall">
+      <vendoroption>
+        <optionvalue requiresvalue="false" switch="/">s</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="extractdrivers">
+      <vendoroption>
+        <optionvalue requiresvalue="false" switch="/">s</optionvalue>
+      </vendoroption>
+      <vendoroption>
+        <container>
+          <containervalue switch="/" requiresvalue="false" valuedelimiter="" enclose="&quot;">v</containervalue>
+          <optionvalue switch="" requiresvalue="true" valuedelimiter="=">EXTRACTDRIVERS</optionvalue>
+        </container>
+      </vendoroption>
+    </behavior>
+  </behaviors>
+  <parameters>
+    <parametermapping name="logfile">
+      <vendoroption>
+        <container>
+          <containervalue switch="/" requiresvalue="false" valuedelimiter="" enclose="&quot;">v</containervalue>
+          <optionvalue switch="" requiresvalue="true" valuedelimiter="=">LOGFILE</optionvalue>
+        </container>
+      </vendoroption>
+    </parametermapping>
+  </parameters>
+  <returncodes>
+    <returncodemapping name="SUCCESS">
+      <vendorreturncode>0</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR">
+      <vendorreturncode>1603</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOT_REQUIRED">
+      <vendorreturncode>3010</vendorreturncode>
+    </returncodemapping>
+  </returncodes>
+  <inventorymetadata>
+
+    <fullpackageidentifier>
+      <registrykeys>
+        <registrykey componentID="103838">
+          <name>"HKEY_LOCAL_MACHINE\SOFTWARE\Dell\ManageableUpdatePackage\Synaptics\Mouse\Synaptics\Synaptics Pointing Device Driver\Version"</name>
+          <value>19.2.17.70</value>
+          <displayName>"HKEY_LOCAL_MACHINE\SOFTWARE\Dell\ManageableUpdatePackage\Synaptics\Mouse\Synaptics\Synaptics Pointing Device Driver\DriverDescription"</displayName>
+          <displayValue>"Synaptics Pointing Device Driver"</displayValue>          
+        </registrykey>
+      </registrykeys>
+    </fullpackageidentifier>
+  </inventorymetadata>
+</MUPDefinition>
